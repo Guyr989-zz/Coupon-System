@@ -1,0 +1,16 @@
+<div class="container">
+    <H1>Welcome <span>{{customerName }}</span></H1>
+    <form class="logout-form" action="/logoutcontroller" (ngSubmit)="onSubmit()">
+      <button class=" btn btn-danger" type="submit">Log Out</button>
+    </form>
+    <hr>
+    <div class="main-content d-flex">
+      <nav class="navbar">
+        <a data-toggle="tooltip" title="My Coupons" id="MyCoupons" class="btn btn-primary navbar-brand" routerLink='mycoupons'>My Coupons</a>
+        <a data-toggle="tooltip" title="Available coupons" id="AvailableCoupons" class="btn btn-primary navbar-brand" routerLink='availablecoupons'>Buy Coupons</a>
+      </nav>
+      <router-outlet></router-outlet>
+    </div>
+    <footer></footer>
+  </div>
+  

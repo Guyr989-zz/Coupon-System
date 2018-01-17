@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <h2>Update Company</h2>
+  <hr>
+  <form #updataCompanyForm="ngForm">
+    <div class="Selector">
+      <label class="badge badge-info">Choose company to update</label>
+      <select required [(ngModel)]="id" name="companySelecter">
+        <option value="{{c.id}}" *ngFor="let c of companies">{{c.compName}}</option>
+      </select>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-1 col-form-label">New Password:</label>
+      <div class="col-sm-2">
+        <input required type="password" class="form-control" id="inputPassword" name="companyPassword" [(ngModel)]="password" #companyPassword="ngModel"
+          placeholder="Password">
+      </div>
+      <div class="alert alert-danger ErrorBox" *ngIf="!companyPassword.valid && companyPassword.touched">
+        <div *ngIf="(companyPassword.errors.required)">Password is required</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputEmail" class="col-sm-1 col-form-label">New Email:</label>
+      <div class="col-sm-2">
+        <input required type="email" class="form-control" id="inputEmail" name="companyEmail" [(ngModel)]="email" #companyEmail="ngModel"
+          placeholder="Email">
+      </div>
+      <div class="alert alert-danger ErrorBox" *ngIf="!companyEmail.valid && companyEmail.touched">
+        <div *ngIf="companyEmail.errors.required">Email is required</div>
+      </div>
+    </div>
+    <button class="btn btn-success btn-md" (click)="updateCompany();" [disabled]="!updataCompanyForm.valid ">Update Company</button>
+  </form>
+
+</div>

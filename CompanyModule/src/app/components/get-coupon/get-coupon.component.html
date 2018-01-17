@@ -1,0 +1,35 @@
+<!-- Header -->
+<h2>Get Coupon By Id</h2>
+<hr>
+<div class="getCouponInput">
+  <input type="number" [(ngModel)]="id" placeholder="Coupon id">
+  <button class="btn btn-success" (click)="getCoupon(id)">Get Coupon</button>
+</div>
+<table class="table table-hover ">
+  <th>Id</th>
+  <th>Title</th>
+  <th>Start Date</th>
+  <th>End Date</th>
+  <th>Amount</th>
+  <th>Type</th>
+  <th>Message</th>
+  <th>Price</th>
+  <th>Image</th>
+  <th>Delete Coupon</th>
+  <tr>
+    <td *ngIf="title">{{id}}</td>
+    <td>{{title}}</td>
+    <td>{{startDate | date:'dd/MM/yyyy'}}</td>
+    <td>{{endDate | date:'dd/MM/yyyy'}}</td>
+    <td>{{amount}}</td>
+    <td>{{type}}</td>
+    <td>{{message}}</td>
+    <td>{{price}}</td>
+    <td>
+      <img class="img-fluid" src={{image}} alt="{{title | lowercase}}">
+    </td>
+    <td *ngIf="title">
+      <button id="delete" (click)="removeCoupon(id)" class="btn btn-danger glyphicon glyphicon-trash"></button>
+    </td>
+  </tr>
+</table>

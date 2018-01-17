@@ -1,0 +1,33 @@
+
+<div class="couponsContainer container-fluid clearFix">
+  <div *ngFor="let c of coupons">
+    <div class="Coupons" *ngIf="!c.amount == 0" >
+      <div class="CouponBody" >
+        <h1>{{c.title | uppercase}}</h1>
+        <div class="CouponsImage">
+          <img src="{{c.image}}" alt="{{c.title | lowercase}}">
+        </div>
+        <div class="CouponsPrice">
+          <label>{{c.price}}$</label>
+        </div>
+        <div class="couponsMsg">
+          <p>{{c.message}}</p>
+          <p>Hurry up only <span style="color:red">{{c.amount}}</span> left</p>
+        </div>
+      </div>
+      <div class="CouponsDates">
+        <p>
+          <label> Starts at:</label> {{c.startDate | date:'dd/MM/yyyy'}}</p>
+          <p>
+            <label> Ends at: </label>{{c.endDate | date:'dd/MM/yyyy'}}</p>
+          </div>
+          <button (click)="PurchaseCoupon(c)"class="btn purchase-btn btn-success" >Purchase</button>  
+        </div>
+        
+      </div>
+        
+        
+        
+        <!--Ending Div-->
+      </div>
+      

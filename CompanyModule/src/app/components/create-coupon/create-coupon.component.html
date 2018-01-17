@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <form #createCouponForm="ngForm">
+    <div class="form-group row">
+      <label for="inputTitle" required class="col-sm-1 col-form-label">Title:</label>
+      <div class="col-sm-2">
+        <input type="text" required class="form-control " placeholder="Title" [(ngModel)]="title" name="title">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="inputStartDate" class="col-sm-1 col-form-label">Start Date:</label>
+      <div class="col-sm-2">
+        <input type="date" required class="form-control " [(ngModel)]="startDate" name="startDate">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="inputEndDate" class="col-sm-1 col-form-label">End Date:</label>
+      <div class="col-sm-2">
+        <input type="date" value="2019-06-01" required class="form-control " [(ngModel)]="endDate" name="endDate">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label for="inputAmount" class="col-sm-1 col-form-label">Amount:</label>
+      <div class="col-sm-2">
+        <input type="number" required class="form-control " placeholder="Amount" [(ngModel)]="amount" name="amount">
+      </div>  
+    </div>
+
+    <div class="form-group row">
+      <label for="inputType" class="col-sm-1 col-form-label">Type:</label>
+      <div class="col-sm-2">
+        <select class="selector" [(ngModel)]="type" name="type">
+          <option value="ELECTRICITY">Electricity</option>
+          <option value="CAMPING">Camping</option>
+          <option value="FOOD">Food</option>
+          <option value="RESTAURANT">Restaurant</option>
+          <option value="HEALTH">Health</option>
+          <option value="SPORT">Sports</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPrice" class="col-sm-1 col-form-label">price:</label>
+      <div class="col-sm-2">
+        <input type="number" required class="form-control " placeholder="price" [(ngModel)]="price" name="Price">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputMessage" class="col-sm-1 col-form-label">Message:</label>
+      <div class="col-sm-2">
+        <input type="text" placeholder="Write a Message" [(ngModel)]="message" name="message">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputImage" class="col-sm-1 col-form-label">Image:</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control-file" [(ngModel)]="image" name="image">
+      </div>
+    </div>
+    <img src="{{image}}" alt="zibi" *ngIf="image != null && image != ''">
+  
+    <button class="btn btn-success btn-md" (click)="CreateCoupon(); createCouponForm.reset()" [disabled]="!createCouponForm.valid">Create Coupon </button>
+    <button class="btn btn-md" (click)="createCouponForm.reset()" >Reset Form</button>
+  </form>
+</div>
+

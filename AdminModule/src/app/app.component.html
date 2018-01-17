@@ -1,0 +1,20 @@
+<div class="container">
+  <H1>Welcome Admin</H1>
+  <form class="logout-form" action="/logoutcontroller" (ngSubmit)="onSubmit()">
+    <button class=" btn btn-danger" type="submit">Log Out</button>
+  </form>
+  <div class="main-content">
+    <nav class="navbar d-flex">
+      <a data-toggle="tooltip" title="Get company by id" id="getCompany" class="btn btn-primary navbar-brand" routerLink="/GetCompany">Get Company</a>
+      <a data-toggle="tooltip" title="Get customer by id" id="getCustomer" class="btn btn-primary navbar-brand" routerLink='GetCustomer'>Get Customer</a>
+      <a data-toggle="tooltip" title="Create a new company" id="createCompany" class="btn btn-primary navbar-brand" routerLink='CreateCompany'>Create Company</a>
+      <a data-toggle="tooltip" title="Update a company" id="updateCompany" class="btn btn-primary navbar-brand" routerLink='UpdateCompany'>Update Company</a>
+      <a data-toggle="tooltip" title="Create a new customer" id="createCustomer" class="btn btn-primary navbar-brand" routerLink='CreateCustomer'>Create Customer</a>
+      <a data-toggle="tooltip" title="Update a customer" id="updateCustomer" class="btn btn-primary navbar-brand" routerLink='UpdateCustomer'>Update Customer</a>
+      <a data-toggle="tooltip" title="Get all customers" id="getAllCustomers" class="btn btn-primary navbar-brand" routerLink='GetAllCustomers'>Get All Customers</a>
+      <a data-toggle="tooltip" title="Get all companies" id="getAllCompanies" class="btn btn-primary navbar-brand" routerLink='GetAllCompanies'>Get All Companies</a>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>

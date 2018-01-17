@@ -1,0 +1,27 @@
+<div class="container-fluid">
+
+  <h2>Update customer</h2>
+  <hr>
+
+  <form #updateCustomerForm="ngForm">
+    <div class="Selector">
+      <label class="badge badge-info">Choose customer to update</label>
+      <select required name="custmoerSelector" [(ngModel)]="id">
+        <option value="{{c.id}}" *ngFor="let c of customers">{{c.custName}}</option>
+      </select>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-1 col-form-label">New Password:</label>
+      <div class="col-sm-2">
+        <input required type="password" class="form-control" id="inputPassword" #customerPassword="ngModel" name="customerPassword"
+          [(ngModel)]="password" placeholder="Password">
+      </div>
+      <div class="alert alert-danger ErrorBox" *ngIf="!customerPassword.valid && customerPassword.touched">
+        Password is required
+      </div>
+    </div>
+    <button class="btn btn-success btn-md" (click)="updateCustomer(); updateCustomerForm.reset();" [disabled]="!updateCustomerForm.valid">Update customer</button>
+  </form>
+
+</div>

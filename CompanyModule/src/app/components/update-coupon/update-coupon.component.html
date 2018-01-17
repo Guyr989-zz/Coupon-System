@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="Selector">
+        <label class="badge badge-info">Choose coupon to update</label>
+        <select required [(ngModel)]="id" name="couponSelector">
+          <option value="{{c.id}}" *ngFor="let c of coupons">{{c.title}}</option>
+        </select>
+      </div>
+
+    <form class="form" #updateCouponForm="ngForm">
+  
+      <div class="form-group row">
+        <label for="inputEndDate" class="col-sm-1 col-form-label">End Date:</label>
+        <div class="col-sm-2">
+          <input type="date" value="2019-06-01" class="form-control " [(ngModel)]="endDate" name="endDate">
+        </div>
+      </div>
+  
+  
+      <div class="form-group row">
+        <label for="inputPrice" class="col-sm-1 col-form-label">price:</label>
+        <div class="col-sm-2">
+          <input type="number" class="form-control " placeholder="price" [(ngModel)]="price" name="Price">
+        </div>
+      </div>
+  
+      <button class="btn btn-success btn-md" (click)="UpdateCoupon();updateCouponForm.reset();">Update Coupon</button>
+    </form>
+  </div>
+  
+  

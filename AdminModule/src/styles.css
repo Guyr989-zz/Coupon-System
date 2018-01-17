@@ -1,0 +1,72 @@
+body{ background: #333; }
+
+form{ margin:10px 0; }
+
+h1,h2{ color:#ccc; }
+ 
+h1 {display:inline-block;  text-transform: capitalize;}
+
+a { color:#000; }
+a:hover { text-decoration: none; }
+
+img { width: 115px; height: 35px; }
+
+select{ border-radius: 5px;}
+
+select:hover { cursor:pointer; }
+
+.Selector{ margin: 15px;}
+
+label {margin: 0; color:#fbfbfb; }
+
+.container{ margin:10px auto; padding: 15px; background: #000; border-radius: 5px; }
+
+
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td { vertical-align: middle; margin: 2px; border: none;}
+
+
+th { padding: 1%;  border-bottom: 1px solid #fff; }
+
+tr { border-bottom: 1px solid #fff; }
+
+.table{ background: #333; border-radius: 5px; color: #fbfbfb; }
+
+.table-hover > tbody > tr:hover{ background: #ffaa33; color:#000; }
+
+.btn-primary{ margin:5px; background: #ffee44; color: #000; border-color: #000;
+    box-shadow:inset -2px -2px 10px #333; text-shadow:-1px 1px 5px #666; }
+    
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary:active{ background: #ffaa33; color:#000; border-color: #000; }
+
+#filters, #customerFilter { margin:15px;} 
+#filters p, #customerFilter p {margin-left: 15px; display: inline-block;}
+#filters input { margin: 5px; }
+
+
+
+.badge{ background: #1166ff; color:#000; padding: 5px; border-radius: 3px;}
+
+.search-tag { padding:5px; border:1px solid #000; border-radius:5px; background: lightgoldenrodyellow;  }
+
+.breadcrumb {background:#fbfbfb; }
+.breadcrumb > .active{ color: #1166ff;}
+
+.getCouponInput{ margin: 10px 0 10px 0; }
+
+.alert-warning{ background: #ffee44; color: #000; text-align: center; }
+
+.ErrorBox {width: 210px; height: 20px; line-height: 0; float: left;}
+
+.getCustomerInput,.getCompanyInput { margin: 10px 0;}
+
+.logout-form { width: 150px; float: right;}
+
+.btn-danger {width: 100%; outline: none; }

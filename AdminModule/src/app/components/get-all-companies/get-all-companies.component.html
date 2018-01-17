@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <!-- Header -->
+  <h2>Get All Companies</h2>
+  <hr>
+
+  <!-- Companies Table -->
+  <table class="table table-hover" >
+        <th>Company ID</th>
+        <th>Company Name</th>
+        <th>Company Password</th>
+        <th>Company Email</th>
+        <th *ngIf="checked" >Company Coupons</th>
+        <th>Delete</th>
+        <!-- tBody -->
+      <tr *ngFor="let c of companies; let i = index">
+        <td >{{c.id}}</td>
+        <td>{{c.compName}}</td>
+        <td>{{c.password}}</td>
+        <td>{{c.email}}</td>
+        <td *ngIf="checked"><img class="img-fluid" src={{c.image}} alt="{{c.compName | lowercase}}"></td>
+        <td class="btn btn-danger glyphicon glyphicon-trash" (click)="removeCompany(c.id,i)"></td>
+      </tr>
+  </table>
+
+</div>

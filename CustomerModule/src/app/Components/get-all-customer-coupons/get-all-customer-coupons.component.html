@@ -1,0 +1,36 @@
+<div class="MyCouponsFilters">
+  <label>
+    <i class="glyphicon glyphicon-search"></i>
+    <input type="text" class="typeFilter" [(ngModel)]="type" placeholder="What's Your type?" />
+  </label>
+  <label>
+    <i class="glyphicon glyphicon-usd"></i>
+    <input type="number" class="priceFilter" [(ngModel)]="price" placeholder="What's Your price?" />
+  </label>
+</div>
+<div class="couponsContainer container-fluid clearFix">
+  <div class="Coupons" *ngFor="let c of coupons | typeFilter:type | priceFilter:price;">
+    <div class="CouponBody">
+      <h1>{{c.title | uppercase}}</h1>
+      <div class="CouponsImage">
+        <img src="{{c.image}}" alt="{{c.title | lowercase}}" style="width:150px; height:150px;">
+      </div>
+
+    </div>
+    <div class="CouponsDates">
+      <p>
+        <label> Starts at:</label> {{c.startDate | date:'dd/MM/yyyy'}}</p>
+      <p>
+        <label> Ends at: </label>{{c.endDate | date:'dd/MM/yyyy'}}</p>
+    </div>
+    <div class="CouponsPrice">
+      <label>purchased For: {{c.price}}$</label>
+    </div>
+    <div>
+      {{c.type}}
+    </div>
+  </div>
+
+
+  <!--Ending Div-->
+</div>

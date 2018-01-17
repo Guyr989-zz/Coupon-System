@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <!-- Header -->
+  <h2>Get Customer</h2>
+  <hr>
+  <div class="getCustomerInput">
+    <input type="number" [(ngModel)]="id" placeholder="customer ID">
+    <button class="btn btn-success" (click)="  getCustomer(id)">Get Customer</button>
+  </div>
+  <table class="table">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Coupons</th>
+    <tr>
+      <td *ngIf="name">{{id}}</td>
+      <td>{{name}}</td>
+      <td>{{password}}</td>
+      <td>{{coupons | json}}</td>
+    </tr>
+  </table>
+
+
+</div>

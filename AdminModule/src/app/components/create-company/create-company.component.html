@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <!-- Header -->
+  <h2>Create New Company</h2>
+  <hr>
+  <!-- create Company Form -->
+
+  <form #createCompanyForm="ngForm">
+    <div class="form-group row">
+      <label for="inputCompanyName" class="col-sm-1 col-form-label">Company Name:</label>
+      <div class="col-sm-2">
+        <input required maxlength="30" type="text" class="form-control mb-2 mr-sm-5 mb-sm-5" placeholder="Company Name" name="companyName"
+          [(ngModel)]="name" #companyName="ngModel">
+      </div>
+      <div class="alert alert-danger ErrorBox" *ngIf="!companyName.valid && companyName.touched" style="border:1px solid red">
+        <div *ngIf="companyName.errors.required">Company Name is required</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-1 col-form-label">Password:</label>
+      <div class="col-sm-2">
+        <input required type="password" #companypassword=ngModel class="form-control" name="companyPassword" placeholder="Password"
+          [(ngModel)]="password">
+      </div>
+      <div class="alert alert-danger ErrorBox" *ngIf="!companypassword.valid && companypassword.touched">
+          Password is required
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail" class="col-sm-1 col-form-label">Email: </label>
+      <div class="col-sm-2">
+        <input required type="email" class="form-control" id="inputEmail" #companyemail=ngModel name="companyEmail" placeholder="Email"
+          [(ngModel)]="email">
+      </div>
+      <div class="alert alert-danger ErrorBox" *ngIf="!companyemail.valid && companyemail.touched">
+        <div *ngIf="companyemail.errors.required">Email is required</div>
+        </div>
+    </div>
+    <button class="btn btn-success btn-md" (click)="addCompany(); createCompanyForm.reset()" [disabled]="!createCompanyForm.valid">Add Company</button>
+  </form>
+
+</div>

@@ -1,0 +1,72 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+
+.clearFix::after {
+    overflow: hidden;
+    display: block;
+    content: "";
+    clear: both;
+}
+
+
+
+.Coupons{
+    width:200px;
+    margin: 20px;
+    padding: 10px;
+    Border:4px solid #EEE8AA;
+    background: #fbfbfb;
+    border-radius: 5px;
+    float: left;
+}
+
+.Coupons h1{
+    font-size: 18px;
+    color:#000;
+    border-bottom: 2px solid #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+}
+
+.CouponBody{
+    height: 200px;
+}
+.CouponsImage{
+    margin: 10px;
+    width:125px;
+    height:75px;
+    text-align: center;
+}
+.CouponsImage img{
+    width:125px;
+    height:75px;
+    display: inline-block;
+}
+
+.CouponsDates{
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #44ffcc;
+    background: #c3c3c3;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.purchase-btn {
+    font:20px Courier New, Courier, monospace;
+    padding: 10px;
+    transform: rotate(9deg);
+    border: 3px solid;
+}
+
+.btn:hover{
+    color: #000;
+  
+}

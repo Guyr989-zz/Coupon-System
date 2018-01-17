@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <!-- Header -->
+  <h2>Get Company</h2>
+  <hr>
+  <div class="getCompanyInput">
+    <input type="number" [(ngModel)]="id" placeholder="Company ID">
+    <button class="btn btn-success" (click)="getCompany(id)">Get Company</button>
+  </div>
+  <table class="table">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Coupons</th>
+    <th>Delete Company</th>
+    <tr>
+      <td *ngIf="name">{{id}}</td>
+      <td>{{name}}</td>
+      <td>{{email}}</td>
+      <td>{{password}}</td>
+      <td *ngFor="let c of coupons"><img src="{{c.image}}" alt="{{name | lowercase}}"></td>
+      <dt *ngIf="name" class="btn btn-danger glyphicon glyphicon-trash" (click)="removeCompany(c.id,i)" style="float:right"></dt>
+    </tr>
+  </table>
+</div>
