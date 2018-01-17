@@ -1,0 +1,87 @@
+
+
+
+.regForm.container{
+	width:500px;
+}
+
+.regForm {
+    margin-top:50px;
+    padding: 10px;
+    border: 5px solid #000;
+    background: #3b4148;
+    border-radius: 10px;
+    color: #000;
+    opacity: 0.9;
+}
+
+h1{
+	padding:15px;
+	background: #cbcbcb;
+	border:1px solid #000;
+	border-radius: 5px;
+}
+
+form {
+    padding: 20px;
+    border: 4px solid #000;
+    border-radius: 8px;
+    background: #cbcbcb;
+    border-right: none;
+    border-left: none;
+}
+
+form .btn-success {
+    width: 180px;
+    background: #B6CE60;
+    border: none;
+}
+
+form .btn-success:hover,
+form .btn-success:active,
+form .btn-success:focus,
+form .btn-success.active.focus,
+form .btn-success.active:focus,
+form .btn-success.active:hover,
+form .btn-success:active.focus,
+form .btn-success:active:focus,
+form .btn-success:active:hover,
+form .open>.dropdown-toggle.btn-success.focus,
+form .open>.dropdown-toggle.btn-success:focus,
+form .open>.dropdown-toggle.btn-success:hover {
+    background: #8CA339;
+    border: none;
+}
+
+form .form-control {
+    border: 3px solid #282E33;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bgtext {
+    color: #6b737e;
+    font-size: 92px;
+    
+}
+
+
+.glyphicon {
+    padding: 10px;
+}
+
+@media screen and (max-width:991px) {
+    label {
+        font-size:17px;
+    }
+
+    label i {
+        display: none !important;
+    }
+
+  }
+
+  
+  
+
+  
